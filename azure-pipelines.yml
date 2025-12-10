@@ -32,6 +32,6 @@ stages:
       name:  'test'
       inputs:
         command: 'test'
-        projects: '**/TopicReceiverTests.csproj'
+        projects: '../**/TopicReceiverTests.csproj'
 
 
