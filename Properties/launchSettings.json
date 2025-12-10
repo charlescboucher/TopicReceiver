@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "TopicReceiver": {
+      "commandName": "Project"
+    },
+    "Container (Dockerfile)": {
+      "commandName": "Docker"
+    }
+  }
+}
