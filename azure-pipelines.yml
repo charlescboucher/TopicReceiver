@@ -21,9 +21,17 @@ stages:
       vmImage: ubuntu-latest
     steps:
     - task: Docker@2
+      name: 'Build'
       displayName: Build an image
       inputs:
         command: build
         dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
         tags: |
           $(tag)
+    - task: DotNetCoreCLI@2
+      name:  'test'
+      inputs:
+        command: 'test'
+        projects: '**/TopicReceiverTests.csproj'
+
+
